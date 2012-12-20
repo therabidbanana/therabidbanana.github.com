@@ -9,11 +9,13 @@ David Haslem
 ============
 
 {% for post in paginator.posts %}
+{% endfor %}
 
 <nav>
 <ul>
   <li><a class="twitter" href="http://twitter.com/therabidbanana">ramblings</a></li>
   <li><a class="facebook" href="http://facebook.com/therabidbanana">friends</a></li>
+  <li><a class="newsblur" href="http://therabidbanana.newsblur.com">reading</a></li>
   <li><a class="github" href="http://github.com/therabidbanana">code</a></li>
 </ul>
 </nav>
