@@ -93,8 +93,12 @@ routers. I ended up being listed as a coauthor on two papers about them:
 <!-- ACM DL Article: Why is my internet slow?: making network speeds visible -->
 <div class="acmdlitem" id="item1979217"><a href="http://dl.acm.org/authorize?419718" title="Why is my internet slow?: making network speeds visible">Why is my internet slow?: making network speeds visible</a><div style="margin-left:25px"><a href="http://dl.acm.org/author_page.cfm?id=81328487724" >Marshini Chetty</a>, <a href="http://dl.acm.org/author_page.cfm?id=81470653179" >David Haslem</a>, <a href="http://dl.acm.org/author_page.cfm?id=81484646551" >Andrew Baird</a>, <a href="http://dl.acm.org/author_page.cfm?id=81484659047" >Ugochi Ofoha</a>, <a href="http://dl.acm.org/author_page.cfm?id=81484641867" >Bethany Sumner</a>, <a href="http://dl.acm.org/author_page.cfm?id=81328488487" >Rebecca Grinter</a><br />CHI '11 Proceedings of the 2011 annual conference on Human factors in computing systems,&nbsp;2011</div></div>
 
+<br>
+
 <!-- ACM DL Article: Eden: supporting home network management through interactive visual tools -->
 <div class="acmdlitem" id="item1866049"><a href="http://dl.acm.org/authorize?390856" title="Eden: supporting home network management through interactive visual tools">Eden: supporting home network management through interactive visual tools</a><div style="margin-left:25px"><a href="http://dl.acm.org/author_page.cfm?id=81384591555" >Jeonghwa Yang</a>, <a href="http://dl.acm.org/author_page.cfm?id=81100595699" >W. Keith Edwards</a>, <a href="http://dl.acm.org/author_page.cfm?id=81470653179" >David Haslem</a><br />UIST '10 Proceedings of the 23nd annual ACM symposium on User interface software and technology,&nbsp;2010</div></div>
+
+<br>
 
 ## Get in Touch
 
