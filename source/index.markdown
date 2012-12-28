@@ -9,7 +9,6 @@ David Haslem
 ============
 
 {% for post in paginator.posts %}
-{% endfor %}
 
 <nav>
 <ul>
