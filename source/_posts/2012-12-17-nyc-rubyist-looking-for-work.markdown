@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "NYC Rubyist Looking For Work"
+title: "NYC (SF) Rubyist (No Longer) Looking For Work"
 date: 2012-12-17 14:30
 comments: true
 categories:
 ---
 
-Hi there - my name is David and I'm looking for work. I've worked at a few
-places and built some cool stuff, let me tell you a bit about myself and what
-I've done.
+Hi there - my name is David, but I'm no longer looking for work (see update
+below). Still, I've worked at a few places and built some cool stuff, let me
+tell you a bit about myself and what I've done.
 
 ## Skills/Interests
 
@@ -100,8 +100,8 @@ routers. I ended up being listed as a coauthor on two papers about them:
 
 <br>
 
-## Get in Touch
+## Update: Working at AdStage
 
-If you think I'd be a good fit for your company (stressing
-*your company* here - no recruiters please) - get in touch with me by email,
-therabidbanana -at- gmail.
+I've taken a position at [AdStage, Inc.](http://adstage.io) and will be working
+there for the foreseeable future. This means a move to San Francisco, which
+should prove to be exciting.
