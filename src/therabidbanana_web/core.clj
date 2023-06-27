@@ -4,6 +4,7 @@
             [clojure.java.io :as io]
             [clojure.string :as str]
             ;; [markdown.core :as mk]
+            [ring.middleware.resource :refer [wrap-resource]]
             [garden.core :refer [css]]
             [nextjournal.markdown :as md]
             [nextjournal.markdown.transform :as md.transform]
@@ -96,12 +97,14 @@
   (stasis/merge-page-sources
    {:public (stasis/slurp-directory "resources/public" #".*\.(html|css|js)$")
     :md-pages  (markdown-pages (stasis/slurp-directory "resources/pages" #".*\.(md|markdown)$"))
+    :md-posts  (markdown-pages (stasis/slurp-directory "resources/posts" #".*\.(md|markdown)$"))
     :pages  (partial-pages (stasis/slurp-directory "resources/pages" #".*\.html$"))}))
 
-(def app (stasis/serve-pages get-pages))
+(def app (wrap-resource (stasis/serve-pages get-pages) "public"))
 
 (def export-dir "dist")
 
 (defn export []
   (stasis/empty-directory! export-dir)
-  (stasis/export-pages (get-pages) export-dir))
+  (stasis/export-pages (get-pages) export-dir)
+  )
