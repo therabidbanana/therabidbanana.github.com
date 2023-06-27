@@ -1,12 +1,16 @@
 # therabidbanana-web
 
-Using Stasis - a no-batteries included "framework"
+Using Stasis - a "no-batteries included" library for static site generation.
 
 https://cjohansen.no/building-static-sites-in-clojure-with-stasis
 
+
+
 ## Usage
 
+lein build
 
+lein ring server
 
 ## License
 

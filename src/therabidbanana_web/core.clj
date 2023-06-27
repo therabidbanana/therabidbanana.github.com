@@ -1,31 +1,96 @@
 (ns therabidbanana-web.core
-  (:require [hiccup.page :refer [html5] :as h]
+  (:require [hiccup2.core :as h]
+            [hiccup.compiler]
             [clojure.java.io :as io]
-            [markdown.core :as mk]
-            ;; [nextjournal.markdown :as md]
-            ;; [nextjournal.markdown.transform :as md.transform]
-            [stasis.core :as stasis]))
+            [clojure.string :as str]
+            ;; [markdown.core :as mk]
+            [garden.core :refer [css]]
+            [nextjournal.markdown :as md]
+            [nextjournal.markdown.transform :as md.transform]
+            [stasis.core :as stasis])
+  (:import [clojure.lang IPersistentVector ISeq Named]))
+
+(def ^{:doc "A list of elements that must be rendered without a closing tag."
+       :private true}
+  void-tags
+  #{"area" "base" "br" "col" "command" "embed" "hr" "img" "input" "keygen" "link"
+    "meta" "param" "source" "track" "wbr"})
+
+(defn- container-tag?
+  "Returns true if the tag has content or is not a void tag. In non-HTML modes,
+  all contentless tags are assumed to be void tags."
+  [tag content]
+  (or content
+      (not (void-tags tag))))
+
+(defn- end-tag [] " />")
+
+(defn render-element
+  "Render an element vector as a HTML element."
+  [element]
+  (let [[tag attrs content] (hiccup.compiler/normalize-element element)]
+    (cond (and (container-tag? tag content) (not (#{"pre" "code"} tag)))
+      (str "<" tag (hiccup.compiler/render-attr-map attrs) ">\n"
+           (hiccup.compiler/render-html content)
+           "\n"
+           "</" tag ">"
+           "\n")
+      (container-tag? tag content)
+      (str "<" tag (hiccup.compiler/render-attr-map attrs) ">"
+           (hiccup.compiler/render-html content)
+           "</" tag ">"
+           "\n")
+      :else
+      (str "<" tag (hiccup.compiler/render-attr-map attrs) (end-tag) "\n"))))
+
+;; Hiccup hacks to add newlines.... do we want it?
+(extend-protocol hiccup.compiler/HtmlRenderer
+  IPersistentVector
+  (render-html [this]
+    (render-element this)))
 
 (defn layout-page [page]
-  (html5
-   [:head
-    [:meta {:charset "utf-8"}]
-    [:meta {:name "viewport"
-            :content "width=device-width, initial-scale=1.0"}]
-    [:title "David Haslem"]
-    [:link {:rel "stylesheet" :href "/styles/styles.css"}]]
-   [:body
-    [:div.logo "davidhaslem.com"]
-    [:div.body page]]))
+  (str
+   (h/html {:mode :html}
+    [:html
+     [:head
+      [:meta {:charset "utf-8"}]
+      [:meta {:name "viewport"
+              :content "width=device-width, initial-scale=1.0"}]
+      [:title "David Haslem"]
+      [:link {:rel "stylesheet" :href "/highlight/styles/dark.min.css"}]
+      [:script {:src "/highlight/highlight.min.js"}]
+      [:script {} "hljs.highlightAll()"]
+      [:link {:rel "stylesheet" :href "/styles/styles.css"}]]
+     [:body
+      [:div.logo "davidhaslem.com"]
+      [:div.body page]]])))
 
+
+(def markdown-renderer
+  (assoc md.transform/default-hiccup-renderers
+         ;; :doc specify a custom container for the whole doc
+         :doc (partial md.transform/into-markup [:div.viewer-markdown])
+         ;; :plain fragments might be nice, but paragraphs help when no reagent is at hand
+         :code (fn [conf el] [:pre [:code {:class (str "language-" (:language el))}
+                                     (get-in el [:content 0 :text])]])))
+
+(defn markdown-render [struct]
+  (md.transform/->hiccup markdown-renderer struct))
+
+(defn parse-markdown [string]
+  (-> (md/parse string)
+      (markdown-render)))
 
 (defn markdown-pages [pages]
-  (zipmap (keys pages)
-          (map #(-> %1 mk/md-to-html-string layout-page) (vals pages))))
+  (zipmap (map #(str/replace % #".(md|markdown)$" "/")
+               (keys pages))
+          (map #(fn [req] (-> % parse-markdown layout-page))
+               (vals pages))))
 
 (defn partial-pages [pages]
   (zipmap (keys pages)
-          (map layout-page (vals pages))))
+          (map #(fn [req] (layout-page %)) (vals pages))))
 
 (defn get-pages []
   (stasis/merge-page-sources
@@ -34,3 +99,9 @@
     :pages  (partial-pages (stasis/slurp-directory "resources/pages" #".*\.html$"))}))
 
 (def app (stasis/serve-pages get-pages))
+
+(def export-dir "dist")
+
+(defn export []
+  (stasis/empty-directory! export-dir)
+  (stasis/export-pages (get-pages) export-dir))
