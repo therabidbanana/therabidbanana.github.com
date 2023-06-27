@@ -10,7 +10,7 @@ David Haslem
 
 <nav>
 <ul>
-  <li><a class="twitter" href="http://twitter.com/therabidbanana">ramblings</a></li>
+  <li><a class="mastodon" href="https://notvery.social/@therabidbanana">ramblings</a></li>
   <li><a class="facebook" href="http://facebook.com/therabidbanana">friends</a></li>
   <li><a class="newsblur" href="https://www.instapaper.com/p/therabidbanana">reading</a></li>
   <li><a class="github" href="http://github.com/therabidbanana">code</a></li>
