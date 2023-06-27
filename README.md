@@ -12,6 +12,13 @@ lein build
 
 lein ring server
 
+## TODO
+
+- Simple asset pipeline
+- Add github workflow
+- Add any remaining posts
+- Replace old jekyll site
+
 ## License
 
 Copyright © 2023 FIXME
