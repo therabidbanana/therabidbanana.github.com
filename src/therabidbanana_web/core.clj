@@ -4,6 +4,7 @@
             [clojure.java.io :as io]
             [clojure.string :as str]
             ;; [markdown.core :as mk]
+            [me.raynes.fs :as fs]
             [ring.middleware.resource :refer [wrap-resource]]
             [garden.core :refer [css]]
             [nextjournal.markdown :as md]
@@ -65,7 +66,9 @@
       [:link {:rel "stylesheet" :href "/styles/styles.css"}]]
      [:body
       [:div.logo "davidhaslem.com"]
-      [:div.body page]]])))
+      [:div.body (if (string? page)
+                   (h/raw page)
+                   page)]]])))
 
 
 (def markdown-renderer
@@ -83,21 +86,25 @@
   (-> (md/parse string)
       (markdown-render)))
 
-(defn markdown-pages [pages]
-  (zipmap (map #(str/replace % #".(md|markdown)$" "/")
+(defn markdown-pages [pages dir]
+  (zipmap (map #(as-> % $
+                  (str/replace $ #".(md|markdown)$" "/")
+                  (str/replace $ #"^/(\d{4})(-\d{2}-\d{2})?-" "/$1/")
+                  (str dir $) )
                (keys pages))
           (map #(fn [req] (-> % parse-markdown layout-page))
                (vals pages))))
 
 (defn partial-pages [pages]
-  (zipmap (keys pages)
+  (zipmap (map #(str/replace % #".(md|markdown)$" "/")
+               (keys pages))
           (map #(fn [req] (layout-page %)) (vals pages))))
 
 (defn get-pages []
   (stasis/merge-page-sources
    {:public (stasis/slurp-directory "resources/public" #".*\.(html|css|js)$")
-    :md-pages  (markdown-pages (stasis/slurp-directory "resources/pages" #".*\.(md|markdown)$"))
-    :md-posts  (markdown-pages (stasis/slurp-directory "resources/posts" #".*\.(md|markdown)$"))
+    :md-pages  (markdown-pages (stasis/slurp-directory "resources/pages" #".*\.(md|markdown)$") "")
+    :md-posts  (markdown-pages (stasis/slurp-directory "resources/posts" #".*\.(md|markdown)$") "/blog")
     :pages  (partial-pages (stasis/slurp-directory "resources/pages" #".*\.html$"))}))
 
 (def app (wrap-resource (stasis/serve-pages get-pages) "public"))
@@ -106,5 +113,6 @@
 
 (defn export []
   (stasis/empty-directory! export-dir)
+  (fs/copy-dir-into "resources/public" export-dir)
   (stasis/export-pages (get-pages) export-dir)
   )

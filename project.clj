@@ -8,6 +8,7 @@
                  [hiccup "2.0.0-RC1"]
                  [io.github.nextjournal/markdown "0.5.144"]
                  ;; [markdown-clj "1.11.4"]
+                 [me.raynes/fs "1.4.6"]
                  [garden "1.3.10"]
                  [ring "1.10.0"]]
   :ring {:handler therabidbanana-web.core/app}
