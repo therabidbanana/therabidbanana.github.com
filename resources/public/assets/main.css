@@ -1,0 +1,75 @@
+body.main {
+    background-color: #2f2f2f;
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1280px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+.main main {
+    flex: 3;
+    margin-left: 1rem;
+    position: relative;
+}
+
+/* Placeholder sidebar */
+.main .sidebar {
+    flex: 1;
+    margin-right: 1rem;
+    color: #efefef;
+}
+
+.main main article {
+    background-color: #efefef;
+    padding: 1.5rem;
+}
+
+.main main nav h1 {
+    color: #efefef;
+    text-shadow: -3px 3px 0 #112233;
+    font-size: 80px;
+    font-family: 'Bevan', Georgia, serif;
+    margin: 0.3rem 0;
+}
+
+.main article aside {
+    right: -33%;
+    width: 33%;
+    position: absolute;
+    color: #efefef;
+    box-sizing: border-box;
+    padding-left: 2rem;
+    border-top: 1px solid #efefef;
+    font-family: Tahoma, sans-serif;
+}
+
+.main article aside a {
+    color: #5577ee;
+}
+
+
+@media screen and (max-width: 800px) {
+    body.main {
+        display: block;
+        margin: 0 1rem;
+    }
+
+    .main main { margin-left: 0; }
+    .main .sidebar { margin-right: 0; }
+    .main article aside {
+        width: 80%;
+        margin: 0 auto;
+        right: 0;
+        position: relative;
+        background-color: #2f2f2f;
+        padding: 1rem;
+        border: none;
+    }
+
+    .main article aside > :first-child {
+        border-top: 1px solid #efefef;
+        padding-top: 1rem;
+    }
+}

@@ -63,24 +63,40 @@
       [:link {:rel "stylesheet" :href "/highlight/styles/dark.min.css"}]
       [:script {:src "/highlight/highlight.min.js"}]
       [:script {} "hljs.highlightAll()"]
-      [:link {:rel "stylesheet" :href "/styles/styles.css"}]]
-     [:body
-      [:div.logo "davidhaslem.com"]
-      [:div.body (if (string? page)
-                   (h/raw page)
-                   page)]]])))
+      [:link {:rel "stylesheet" :href "/assets/main.css"}]]
+     [:body.main
+      [:main
+       [:nav ]
+       [:article
+        (if (string? page)
+          (h/raw page)
+          page)]
+       ]
+      [:div.sidebar {}]
+      ]])))
 
 
 (def markdown-renderer
   (assoc md.transform/default-hiccup-renderers
          ;; :doc specify a custom container for the whole doc
-         :doc (partial md.transform/into-markup [:div.viewer-markdown])
+         :doc (partial md.transform/into-markup [:div])
          ;; :plain fragments might be nice, but paragraphs help when no reagent is at hand
-         :code (fn [conf el] [:pre [:code {:class (str "language-" (:language el))}
-                                     (get-in el [:content 0 :text])]])))
+         :footnote-ref (fn [conf el]
+                         ;; [:code {} (get-in conf [:footnotes (:ref el)])]
+                         (md.transform/into-markup [:aside]
+                                                   conf
+                                                   (get-in conf [:footnotes (:ref el)]))
+                         )
+         :code (fn [conf el]
+                 (if (= (:language el) "aside")
+                   [:pre [:code {:class (str "language-" (:language el))}
+                          (get-in el [:content 0 :text])]]))))
 
 (defn markdown-render [struct]
-  (md.transform/->hiccup markdown-renderer struct))
+  (md.transform/->hiccup (assoc markdown-renderer :footnotes (:footnotes struct))
+                         struct)
+  ;; [:code {} struct]
+  )
 
 (defn parse-markdown [string]
   (-> (md/parse string)
