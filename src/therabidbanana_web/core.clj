@@ -64,15 +64,16 @@
       [:script {:src "/highlight/highlight.min.js"}]
       [:script {} "hljs.highlightAll()"]
       [:link {:rel "stylesheet" :href "/assets/main.css"}]]
-     [:body.main
-      [:main
-       [:nav ]
-       [:article
-        (if (string? page)
-          (h/raw page)
-          page)]
-       ]
-      [:div.sidebar {}]
+     [:body
+      [:div#container {}
+       [:main
+        [:nav ]
+        [:article
+         (if (string? page)
+           (h/raw page)
+           page)]
+        ]
+       [:div.sidebar {}]]
       ]])))
 
 
