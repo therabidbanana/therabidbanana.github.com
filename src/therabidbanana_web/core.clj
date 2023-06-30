@@ -61,13 +61,15 @@
               :content "width=device-width, initial-scale=1.0"}]
       [:title "David Haslem"]
       [:link {:rel "stylesheet" :href "/highlight/styles/dark.min.css"}]
+      [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Bevan:regular"}]
       [:script {:src "/highlight/highlight.min.js"}]
       [:script {} "hljs.highlightAll()"]
       [:link {:rel "stylesheet" :href "/assets/main.css"}]]
      [:body
       [:div#container {}
        [:main
-        [:nav ]
+        [:nav
+         [:h1 [:a {:href "/"} "David Haslem"]]]
         [:article
          (if (string? page)
            (h/raw page)
