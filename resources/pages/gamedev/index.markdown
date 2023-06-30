@@ -1,7 +1,10 @@
 # Game Development
 
-I have made a hobby of making games with my daughters. We started with a Scratch for Beginners book and I've begun exploring alternatives.
+_See also - my list of [Game Dev Resources](/gamedev/resources/)_
 
+I have made a hobby of making games with my daughters. We started with a Scratch for Beginners book and I've begun exploring alternatives to keep them engaged while also trying to level up my own skill set.
+
+-------
 
 ## Projects
 

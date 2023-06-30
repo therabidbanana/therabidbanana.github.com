@@ -66,6 +66,7 @@
       [:title "David Haslem"]
       [:link {:rel "stylesheet" :href "/highlight/styles/dark.min.css"}]
       [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Bevan:regular"}]
+      [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Open+Sans:regular"}]
       [:script {:src "/highlight/highlight.min.js"}]
       [:script {} "hljs.highlightAll()"]
       [:link {:rel "stylesheet" :href "/assets/main.css"}]]

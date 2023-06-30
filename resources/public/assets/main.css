@@ -33,7 +33,7 @@ body {
 #container main article {
     border-top: 1.5rem solid #336699;
     background-color: #efefef;
-    padding: 1.5rem;
+    padding: 3.5rem;
     border-radius: 10px;
 }
 
@@ -81,7 +81,7 @@ body {
     box-sizing: border-box;
     padding: 0.2rem 1.2rem;
     border-top: 1px solid #efefef;
-    font-family: Tahoma, sans-serif;
+    font-family: 'Open Sans', Tahoma, sans-serif;
 }
 
 #container article aside a {

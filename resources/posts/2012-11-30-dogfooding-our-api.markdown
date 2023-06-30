@@ -5,6 +5,7 @@ date: 2012-11-30 14:33
 comments: true
 categories:
 ---
+
 (Crossposted from the reachably blog: http://blog.reachably.com/post/36887084961/dogfooding-our-api [link dead])
 
 Reachably wasn't always Reachably - we used to be called "dtime". This was back when we were building our initial prototype with a focus on making decisions. We learned quite a few lessons there - some business (people didn't like the formality of making a decision publicly online) and some technical (we had a mess of a code base from all of the changes we were making).
