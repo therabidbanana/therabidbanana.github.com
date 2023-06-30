@@ -31,7 +31,11 @@
   "Render an element vector as a HTML element."
   [element]
   (let [[tag attrs content] (hiccup.compiler/normalize-element element)]
-    (cond (and (container-tag? tag content) (not (#{"pre" "code"} tag)))
+    (cond
+      ;; Not sure why nextjournal markdown is adding these
+      (= "<>" tag)
+      (hiccup.compiler/render-html content)
+      (and (container-tag? tag content) (not (#{"pre" "code"} tag)))
       (str "<" tag (hiccup.compiler/render-attr-map attrs) ">\n"
            (hiccup.compiler/render-html content)
            "\n"
@@ -71,6 +75,7 @@
         [:nav
          [:h1 [:a {:href "/"} "David Haslem"]]]
         [:article
+         {}
          (if (string? page)
            (h/raw page)
            page)]
@@ -93,7 +98,8 @@
          :code (fn [conf el]
                  (if (= (:language el) "aside")
                    [:pre [:code {:class (str "language-" (:language el))}
-                          (get-in el [:content 0 :text])]]))))
+                          (get-in el [:content 0 :text])]]))
+         ))
 
 (defn markdown-render [struct]
   (md.transform/->hiccup (assoc markdown-renderer :footnotes (:footnotes struct))
@@ -107,15 +113,17 @@
 
 (defn markdown-pages [pages dir]
   (zipmap (map #(as-> % $
-                  (str/replace $ #".(md|markdown)$" "/")
+                  ;; TODO - why doesn't index replace?
+                  (str/replace $ #"(index\.md|index\.markdown)$" "")
+                  (str/replace $ #"(\.md|\.markdown)$" "/")
                   (str/replace $ #"^/(\d{4})(-\d{2}-\d{2})?-" "/$1/")
-                  (str dir $) )
+                  (str dir $))
                (keys pages))
           (map #(fn [req] (-> % parse-markdown layout-page))
                (vals pages))))
 
 (defn partial-pages [pages]
-  (zipmap (map #(str/replace % #".(md|markdown)$" "/")
+  (zipmap (map #(str/replace % #".(html)$" "/")
                (keys pages))
           (map #(fn [req] (layout-page %)) (vals pages))))
 
