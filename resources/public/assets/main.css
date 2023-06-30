@@ -62,18 +62,19 @@ img {
 @media screen and (max-width: 800px) {
     #container {
         display: block;
-        margin: 0 1rem;
+        margin: 0 0.2rem;
     }
 
     #container main { margin-left: 0; }
+    #container main article { padding: 0.7rem; }
     #container .sidebar { margin-right: 0; }
     #container article aside {
-        width: 80%;
+        width: 94%;
         margin: 0 auto;
         right: 0;
         position: relative;
         background-color: #2f2f2f;
-        padding: 1rem;
+        padding: 0.8rem;
         border: none;
     }
 
