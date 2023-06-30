@@ -20,6 +20,9 @@ Tic80 is a fantasy console for making tiny games. It is open source, comes with 
 * Tic80 Cheatsheet 
 
   <https://skyelynwaddell.github.io/tic80-manual-cheatsheet/> 
+* Tic80 Beginners Course
+  
+  <https://borbware.github.io/tic80-basics/>
 
 ## Scratch
 
