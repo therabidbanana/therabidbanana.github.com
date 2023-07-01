@@ -15,6 +15,9 @@ lein ring server
 ## TODO
 
 - Simple asset pipeline
+- RSS export
+- Better resource organization?
+- Activitypub support
 
 ## License
 

@@ -20,6 +20,9 @@ Tic80 is a fantasy console for making tiny games. It is open source, comes with 
 * Tic80 Cheatsheet 
 
   <https://skyelynwaddell.github.io/tic80-manual-cheatsheet/> 
+* Tic80 Beginners Course
+  
+  <https://borbware.github.io/tic80-basics/>
 
 ## Scratch
 
@@ -32,3 +35,11 @@ Scratch is a block based programming environment geared toward teaching kids how
 * _Coding for Beginners_ is a friendly intro to Scratch - I have an old edition so I've ended up needing to translate some of the blocks.
 
   [Coding for Beginners on Amazon](https://www.amazon.com/Coding-Beginners-Scratch-Rosie-Dickins/dp/1474975097)
+
+## Lua
+
+* <https://tylerneylon.com/a/learn-lua/>
+
+## Löve
+
+* <https://sheepolution.com/learn/book/contents>
