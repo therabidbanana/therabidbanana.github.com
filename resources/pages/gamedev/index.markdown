@@ -20,9 +20,9 @@ Help the Rainbow Witch Princess save the kingdom from the Disastrous Flying Crit
 ![Rainbow Princess Game](/assets/images/gamedev/flying-critters/1.png)
 ![Rainbow Princess Game](/assets/images/gamedev/flying-critters/3.png)
 
-### Asteroids
+### Space Flyer
 
-^[[Coding for Beginners](https://www.amazon.com/Coding-Beginners-Scratch-Rosie-Dickins/dp/1474975097) is a great resources for engaging kids with programming]
+^[[Coding for Beginners](https://www.amazon.com/Coding-Beginners-Scratch-Rosie-Dickins/dp/1474975097) is a great resource for engaging kids with programming]
 
 Space Flyer - a game made in scratch. Initial build from Scratch for Beginners, additional recommendations made by Fiona and Ada.
 
