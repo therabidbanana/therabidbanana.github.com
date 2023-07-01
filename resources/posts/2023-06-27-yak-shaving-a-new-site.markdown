@@ -4,7 +4,7 @@ title: "Yak Shaving a New Website"
 
 Blogging is always something that I want to start doing more, get going with one or two posts, then fizzle out with. Looking back through the history, it seems like I'm a cicada, poking my head out every 5 to 7 years with a couple of posts and then leaving the links behind as I go back to other projects.
 
-I've had DavidHaslem.com for well over 10 years as a personal website, but for the most part I've left it to stagnate. The previous iteration, over 7 years old, was an "Octopress" based blog, built on Jekyll to support Github Pages. I recently encountered a post on Mastodon that made we want to start building out my site again, but unfortunately making a commit to the repo didn't build as I expected and thus started my yak shave....
+I've had DavidHaslem.com for well over 10 years as a personal website, but for the most part I've left it to stagnate. The previous iteration, over 7 years old, was an "Octopress" based blog, built on Jekyll to support Github Pages. I recently encountered a post on Mastodon that made me want to start building out my site again, but unfortunately making a commit to the repo didn't build as I expected and thus started my yak shave....
 
 
 1. The build was failing, why? Probably because the Ruby versions were so old, can I fix the workflow?
