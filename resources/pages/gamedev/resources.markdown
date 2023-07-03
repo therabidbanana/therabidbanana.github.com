@@ -36,7 +36,8 @@ Scratch is a block based programming environment geared toward teaching kids how
 
   [Coding for Beginners on Amazon](https://www.amazon.com/Coding-Beginners-Scratch-Rosie-Dickins/dp/1474975097)
   
-* Leopard JS - convert Scratch .sb3 to web format: <https://leopardjs.com/>
+* Leopard JS - convert Scratch .sb3 to web format, more focused on readable/hackable code generation: <https://leopardjs.com/>
+* TurboWarp Packager - convert Scratch .sb3 to web, with emphasis on performance and completeness - html is difficult to hack afterward, but experience is closer to what you see in Scratch: <https://packager.turbowarp.org/>
 
 ## Lua
 

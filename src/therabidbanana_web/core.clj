@@ -122,8 +122,13 @@
   )
 
 (defn parse-markdown [string]
-  (-> (md/parse string)
-      (markdown-render)))
+  (let [has-header?     (str/starts-with? string "---")
+        [_ header string] (if has-header?
+                          (str/split string #"---" 3)
+                          ["" "" string])
+        ]
+    (-> (md/parse string)
+        (markdown-render))))
 
 (defn markdown-pages [pages dir]
   (zipmap (map #(as-> % $

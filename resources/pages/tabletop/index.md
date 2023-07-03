@@ -22,7 +22,7 @@ Tenkiwi supports two game modes out of the box, and I've built 4 other game mode
 
 _See also - my list of [Gaming Resources](/tabletop/play-resources/)_
 
-Our family tries to play board games and RPGs at least once a month - it's not as much as we'd like but gotta also have time to play video games.
+Our family tries to play board games and RPGs at least once a month - here are some of the games we've enjoyed.
 
 ### With the Kiddos
 
@@ -30,3 +30,10 @@ Our family tries to play board games and RPGs at least once a month - it's not a
 * No Thank You, Evil! - a great starter RPG
 * Charge RPG - great bones for playing custom one-shots the kids request on RPG day
 
+### Grownup Games
+
+* Scythe
+* Dune Imperium
+* Game of Thrones LCG
+* Lord of the Rings LCG
+* Arkham Horror (2nd and 3rd edition)
