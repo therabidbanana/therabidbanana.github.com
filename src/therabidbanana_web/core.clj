@@ -12,6 +12,18 @@
             [stasis.core :as stasis])
   (:import [clojure.lang IPersistentVector ISeq Named]))
 
+(defmethod nextjournal.markdown.parser/apply-token "html_block" [doc {:as _token c :content}]
+  (-> doc
+      (nextjournal.markdown.parser/open-node :raw-html)
+      (nextjournal.markdown.parser/push-node (nextjournal.markdown.parser/text-node c))
+      nextjournal.markdown.parser/close-node))
+
+(defmethod nextjournal.markdown.parser/apply-token "html_inline" [doc {:as _token c :content}]
+  (-> doc
+      (nextjournal.markdown.parser/open-node :raw-html)
+      (nextjournal.markdown.parser/push-node (nextjournal.markdown.parser/text-node c))
+      nextjournal.markdown.parser/close-node))
+
 (def ^{:doc "A list of elements that must be rendered without a closing tag."
        :private true}
   void-tags
@@ -90,6 +102,7 @@
          ;; :doc specify a custom container for the whole doc
          :doc (partial md.transform/into-markup [:div])
          ;; :plain fragments might be nice, but paragraphs help when no reagent is at hand
+         :raw-html (fn [conf el] (h/raw (get-in el [:content 0 :text])))
          :footnote-ref (fn [conf el]
                          ;; [:code {} (get-in conf [:footnotes (:ref el)])]
                          (md.transform/into-markup [:aside]
