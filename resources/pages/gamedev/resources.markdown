@@ -1,4 +1,6 @@
-# Game Dev Resources
+---
+title: Game Dev Resources
+---
 
 This is a list of links to Game development resources I've gathered.
 

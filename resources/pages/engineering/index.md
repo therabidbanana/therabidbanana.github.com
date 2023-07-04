@@ -1,7 +1,16 @@
-# Engineering
+---
+title: Engineering
+---
 
 _See also - my list of [Engineering Resources](/engineering/resources/)_
 
+
+----
+
+## Projects
+
+* [addressable](https://github.com/sporkmonger/addressable) - contributed enhancements to URI templates to match RFC
+* [this site](https://github.com/therabidbanana/therabidbanana.github.com) - Example of Github Pages with Clojure.
 
 ----
 
@@ -18,4 +27,4 @@ _See also - my list of [Engineering Resources](/engineering/resources/)_
 
 **2012**
 
-* [Dogfooding our API](/blog/2012/dogfooding-our-api/) - about how we set up a separate API and Frontend server at Reachably, back before it was cool
+* [Dogfooding our API](/blog/2012/dogfooding-our-api/) - about how we set up a separate API and Frontend server at Reachably, back when Backbone.js was cool (was it ever?)

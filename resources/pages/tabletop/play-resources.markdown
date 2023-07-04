@@ -1,4 +1,6 @@
-# Tabletop Gaming Resources
+---
+title: Tabletop Gaming Resources
+---
 
 This is a list of links to resources I've gathered for organizing and playing games, as well as unofficial expansions or other odds and ends.
 

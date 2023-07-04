@@ -1,4 +1,6 @@
-# Game Development
+---
+title: Game Development
+---
 
 _See also - my list of [Game Dev Resources](/gamedev/resources/)_
 

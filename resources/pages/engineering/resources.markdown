@@ -1,4 +1,6 @@
-# Engineering Resources
+---
+title: Engineering Resources
+---
 
 This is a list of links to engineering resources I've gathered.
 

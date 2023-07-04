@@ -1,4 +1,6 @@
-# Tabletop Resources
+---
+title: Tabletop Resources
+---
 
 This is a list of links to resources to make tabletop games I've gathered. My Tenkiwi platform is Clojure/Clojurescript, so also check out [Engineering Resources](/engineering/resources/)
 

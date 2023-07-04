@@ -88,6 +88,11 @@ body {
     color: #6699cc;
 }
 
+#container article aside img, #container article aside iframe {
+    margin: 0 auto;
+    display: block;
+}
+
 
 @media screen and (max-width: 960px) {
     #container {
