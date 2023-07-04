@@ -17,7 +17,7 @@ body {
 #container main {
     max-width: 960px;
     margin-left: 1rem;
-    border-left: 1.5rem solid #336699;
+    border-left: 1rem solid #336699;
     position: relative;
 }
 
@@ -33,7 +33,7 @@ body {
 
 #container main article {
     border-top: 2.5rem solid #336699;
-    border-right: 0.2rem solid #336699;
+    border-right: 4.2rem solid #336699;
     background-color: #efefef;
     padding: 2.5rem 2.5rem 2.5rem 5.5rem;
     border-right-radius: 10px;
@@ -126,6 +126,7 @@ body {
         padding: 1.2rem 1.6rem;
         line-height: 1.4rem;
         border-top-width: 1.8rem;
+        border-right-width: 0.4rem;
     }
     #container main article h1 {
         line-height: 2.5rem;

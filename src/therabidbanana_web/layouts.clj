@@ -18,7 +18,7 @@
     [:div#container {}
      [:main
       [:nav
-       [:h1 [:a {:href "/"} "David Haslem"]]]
+       [:h1 [:a {:href "/"} "David Haslem ↑"]]]
       [:article
        {}
        (if (:title header)
