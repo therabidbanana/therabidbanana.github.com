@@ -17,7 +17,7 @@ I have made a hobby of making games with my daughters. We started with a Scratch
 
 Help the Rainbow Witch Princess save the kingdom from the Disastrous Flying Critters trying to destroy it! Fly around the kingdoms, close the portals with your color changing magic, and restore the terrain to the correct hue.
 
-[Play it on Itch.io](https://therabidbanana.itch.io/disastrous-flying-critters)
+<iframe src="https://itch.io/embed/2102019?bg_color=333C57&amp;fg_color=94B0C2&amp;link_color=fa5c5c&amp;border_color=36423f" width="208" height="167" frameborder="0"><a href="https://therabidbanana.itch.io/disastrous-flying-critters">Disastrous Flying Critters by therabidbanana</a></iframe>
 
 ![Rainbow Princess Game](/assets/images/gamedev/flying-critters/1.png)
 ![Rainbow Princess Game](/assets/images/gamedev/flying-critters/3.png)
