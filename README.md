@@ -15,7 +15,6 @@ lein ring server
 ## TODO
 
 - Simple asset pipeline
-- Handle header yaml blocks
 - RSS export
 - Better resource organization?
 - Activitypub support
