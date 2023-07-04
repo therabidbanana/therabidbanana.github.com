@@ -1,6 +1,7 @@
 (ns therabidbanana-web.core
   (:require [hiccup2.core :as h]
             [hiccup.compiler]
+            [clj-yaml.core :as yaml]
             [clojure.java.io :as io]
             [clojure.string :as str]
             ;; [markdown.core :as mk]
@@ -68,39 +69,46 @@
     (render-element this)))
 
 (defn layout-page [page]
-  (str
-   (h/html {:mode :html}
-    [:html
-     [:head
-      [:meta {:charset "utf-8"}]
-      [:meta {:name "viewport"
-              :content "width=device-width, initial-scale=1.0"}]
-      [:title "David Haslem"]
-      [:link {:rel "stylesheet" :href "/highlight/styles/dark.min.css"}]
-      [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Bevan:regular"}]
-      [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Open+Sans:regular"}]
-      [:script {:src "/highlight/highlight.min.js"}]
-      [:script {} "hljs.highlightAll()"]
-      [:link {:rel "stylesheet" :href "/assets/main.css"}]]
-     [:body
-      [:div#container {}
-       [:main
-        [:nav
-         [:h1 [:a {:href "/"} "David Haslem"]]]
-        [:article
-         {}
-         (if (string? page)
-           (h/raw page)
-           page)]
-        ]
-       [:div.sidebar {}]]
-      ]])))
+  (let [page (if (string? page)
+               {:header {} :body page}
+               page)
+        {:keys [header body]} page]
+    (str
+     (h/html {:mode :html}
+             [:html
+              [:head
+               [:meta {:charset "utf-8"}]
+               [:meta {:name "viewport"
+                       :content "width=device-width, initial-scale=1.0"}]
+               [:title "David Haslem"]
+               [:link {:rel "stylesheet" :href "/highlight/styles/dark.min.css"}]
+               [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Bevan:regular"}]
+               [:link {:rel "stylesheet" :href "https://fonts.googleapis.com/css?family=Open+Sans:regular"}]
+               [:script {:src "/highlight/highlight.min.js"}]
+               [:script {} "hljs.highlightAll()"]
+               [:link {:rel "stylesheet" :href "/assets/main.css"}]]
+              [:body
+               [:div#container {}
+                [:main
+                 [:nav
+                  [:h1 [:a {:href "/"} "David Haslem"]]]
+                 [:article
+                  {}
+                  (if (:title header)
+                    [:header {} [:h1 {} (:title header)]])
+                  [:section {}
+                   (if (string? body)
+                     (h/raw body)
+                     body)]]
+                 ]
+                [:div.sidebar {}]]
+               ]]))))
 
 
 (def markdown-renderer
   (assoc md.transform/default-hiccup-renderers
          ;; :doc specify a custom container for the whole doc
-         :doc (partial md.transform/into-markup [:div])
+         ;; :doc (partial md.transform/into-markup [:div])
          ;; :plain fragments might be nice, but paragraphs help when no reagent is at hand
          :raw-html (fn [conf el] (h/raw (get-in el [:content 0 :text])))
          :footnote-ref (fn [conf el]
@@ -126,9 +134,12 @@
         [_ header string] (if has-header?
                           (str/split string #"---" 3)
                           ["" "" string])
-        ]
-    (-> (md/parse string)
-        (markdown-render))))
+        parsed-header     (if has-header?
+                            (yaml/parse-string header)
+                            {})]
+    (->> (md/parse string)
+         (markdown-render)
+         (assoc {:header parsed-header} :body))))
 
 (defn markdown-pages [pages dir]
   (zipmap (map #(as-> % $

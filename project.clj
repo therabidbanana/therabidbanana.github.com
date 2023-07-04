@@ -9,6 +9,7 @@
                  [io.github.nextjournal/markdown "0.5.144"]
                  ;; [markdown-clj "1.11.4"]
                  [me.raynes/fs "1.4.6"]
+                 [clj-commons/clj-yaml "1.0.26"]
                  [garden "1.3.10"]
                  [ring "1.10.0"]]
   :ring {:handler therabidbanana-web.core/app}
