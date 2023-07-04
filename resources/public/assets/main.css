@@ -37,7 +37,7 @@ body {
     background-color: #efefef;
     padding: 2.5rem 2.5rem 2.5rem 5.5rem;
     border-right-radius: 10px;
-    box-shadow: 2px -2px 1px #112233;
+    box-shadow: 5px -2px 1px #112233;
 }
 
 #container main nav h1 {
@@ -88,7 +88,7 @@ body {
     color: #efefef;
     box-sizing: border-box;
     padding: 0.2rem 1.2rem;
-    border-top: 1px solid #efefef;
+    border-top: 2px solid #336699;
     font-family: 'Open Sans', Tahoma, sans-serif;
     text-shadow: 1px 1px 1px #112233;
 }
@@ -112,10 +112,11 @@ body {
     #container main { margin-left: 0; }
     #container main nav h1 {
 	      font-size: 2.8rem;
-	      margin: 0 0 -2rem;
+        line-height: 3rem;
+	      margin: 0 0.5rem -1.5rem;
 	      transform: none;
 	      position: inherit;
-	      text-align: center;
+	      text-align: right;
     }
     #container article p.callout {
 	      font-size: 2rem;
@@ -145,14 +146,14 @@ body {
         position: relative;
         background-color: #2f2f2f;
         padding: 0.8rem;
-        border: none;
+        border: 2px solid #123;
         background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.02) 75%, transparent 75%, transparent);
         background-size: 150px 150px;
         box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.5);
     }
 
     #container article aside > :first-child {
-        border-top: 1px solid #efefef;
+        border-top: 3px solid #336699;
         padding-top: 1rem;
     }
 }
