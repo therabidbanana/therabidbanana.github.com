@@ -46,8 +46,10 @@ body {
 }
 
 #container main article {
-    border-top: 2.5rem groove var(--color);
-    border-right: 4.2rem ridge var(--color);
+    border-top: 2.5rem groove var(--color-dark);
+    border-right: 4.2rem ridge var(--color-dark);
+    outline: 1rem solid var(--color);
+    outline-offset: -1rem;
     background-color: #efefef;
     padding: 2.5rem 2.5rem 2.5rem 5.5rem;
     border-right-radius: 10px;
