@@ -1,5 +1,6 @@
 ---
 title: Game Development
+accent-color: 285
 ---
 
 _See also - my list of [Game Dev Resources](/gamedev/resources/)_

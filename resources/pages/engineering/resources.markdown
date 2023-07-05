@@ -1,11 +1,15 @@
 ---
 title: Engineering Resources
+accent-color: 210
 ---
 
 This is a list of links to engineering resources I've gathered.
 
 ## General Programming
 
+## CSS
+
+* Calculating Color: Dynamic Color Theming with Pure CSS - <https://una.im/css-color-theming/>
 
 ## Ruby
 

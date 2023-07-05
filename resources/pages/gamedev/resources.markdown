@@ -1,5 +1,6 @@
 ---
 title: Game Dev Resources
+accent-color: 285
 ---
 
 This is a list of links to Game development resources I've gathered.

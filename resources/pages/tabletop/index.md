@@ -1,5 +1,6 @@
 ---
 title: Tabletop Games
+accent-color: 110
 ---
 
 _See also - my list of [Tabletop Dev Resources](/tabletop/resources/)_
