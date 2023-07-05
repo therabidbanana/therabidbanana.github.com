@@ -151,6 +151,8 @@ body {
         line-height: 1.4rem;
         border-top-width: 1.8rem;
         border-right-width: 0.4rem;
+        outline-offset: -0.5rem;
+        outline-width: 0.5rem;
     }
     #container main article h1 {
         line-height: 2.5rem;
