@@ -1,9 +1,23 @@
+
 body {
     background-color: #2f2f2f;
     padding: 0;
     margin: 0;
     font-family: Georgia, serif;
     font-size: 18px;
+    /* https://una.im/css-color-theming/ */
+    --color-h: 210;
+    --color-s: 50%;
+    --color-l: 40%;
+    --darknessTransform: 15%;
+    --lightnessTransform: 15%;
+    --color-dark-l: calc(var(--color-l) - var(--darknessTransform));
+    --color-very-dark-l: calc(var(--color-dark-l) - var(--darknessTransform));
+    --color-light-l: calc(var(--color-l) + var(--lightnessTransform));
+    --color: hsl(var(--color-h), var(--color-s), var(--color-l));
+    --color-dark: hsl(var(--color-h), var(--color-s), var(--color-dark-l));
+    --color-very-dark: hsl(var(--color-h), var(--color-s), var(--color-very-dark-l));
+    --color-light: hsl(var(--color-h), var(--color-s), var(--color-light-l));
 }
 
 #container {
@@ -17,7 +31,7 @@ body {
 #container main {
     max-width: 960px;
     margin-left: 1rem;
-    border-left: 1rem solid #336699;
+    border-left: 1rem solid var(--color);
     position: relative;
 }
 
@@ -28,21 +42,21 @@ body {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.02) 75%, transparent 75%, transparent);
     box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.5);
     background-size: 150px 150px;
-    border-right: 1rem solid #336699;
+    border-right: 1rem solid var(--color);
 }
 
 #container main article {
-    border-top: 2.5rem solid #336699;
-    border-right: 4.2rem solid #336699;
+    border-top: 2.5rem groove var(--color);
+    border-right: 4.2rem ridge var(--color);
     background-color: #efefef;
     padding: 2.5rem 2.5rem 2.5rem 5.5rem;
     border-right-radius: 10px;
-    box-shadow: 5px -2px 1px #112233;
+    box-shadow: 3px -2px 1px var(--color-very-dark);
 }
 
 #container main nav h1 {
 	  color: #efefef;
-	  text-shadow: -3px 3px 0 #112233;
+	  text-shadow: -3px 3px 0 var(--color-very-dark);
 	  font-size: 4.5rem;
 	  font-family: 'Bevan', Georgia, serif;
 	  line-height: 70px;
@@ -58,7 +72,7 @@ body {
     text-decoration: none;
 }
 #container main nav h1 a:hover {
-    color: #6699cc;
+    color: var(--color-light);
 }
 
 #container article img {
@@ -66,7 +80,7 @@ body {
 }
 
 #container article a {
-    color: #336699;
+    color: var(--color);
     overflow-wrap: break-word;
 }
 
@@ -77,7 +91,7 @@ body {
 }
 
 #container article p.callout strong {
-    color: #336699;
+    color: var(--color);
 }
 
 
@@ -88,13 +102,13 @@ body {
     color: #efefef;
     box-sizing: border-box;
     padding: 0.2rem 1.2rem;
-    border-top: 2px solid #336699;
+    border-top: 2px solid var(--color);
     font-family: 'Open Sans', Tahoma, sans-serif;
-    text-shadow: 1px 1px 1px #112233;
+    text-shadow: 1px 1px 1px var(--color-very-dark);
 }
 
 #container article aside a {
-    color: #6699cc;
+    color: var(--color-light);
 }
 
 #container article aside img, #container article aside iframe {
@@ -146,14 +160,14 @@ body {
         position: relative;
         background-color: #2f2f2f;
         padding: 0.8rem;
-        border: 2px solid #123;
+        border: 2px solid var(--color-very-dark);
         background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.02) 75%, transparent 75%, transparent);
         background-size: 150px 150px;
         box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.5);
     }
 
     #container article aside > :first-child {
-        border-top: 3px solid #336699;
+        border-top: 3px solid var(--color);
         padding-top: 1rem;
     }
 }
