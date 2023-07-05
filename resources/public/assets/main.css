@@ -126,12 +126,16 @@ body {
     }
 
     #container main { margin-left: 0; }
+    #container main nav {
+        z-index: 2;
+        position: relative;
+    }
     #container main nav h1 {
 	      font-size: 2.8rem;
         line-height: 3rem;
 	      margin: 0 0.5rem -1.5rem;
 	      transform: none;
-	      position: inherit;
+	      position: unset;
 	      text-align: right;
     }
     #container article p.callout {
@@ -140,6 +144,9 @@ body {
 	      line-height: 2.7rem;
     }
     #container main article {
+        z-index: 1;
+        position: relative;
+
         padding: 1.2rem 1.6rem;
         line-height: 1.4rem;
         border-top-width: 1.8rem;
