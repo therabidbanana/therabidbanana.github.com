@@ -11,6 +11,12 @@ This is a list of links to engineering resources I've gathered.
 
 * Calculating Color: Dynamic Color Theming with Pure CSS - <https://una.im/css-color-theming/>
 
+## Social Web
+
+* Run your own social - tips on how to run your own social network based on Mastodon - <http://runyourown.social/>
+* Hometown - a Mastodon fork with additional features - <https://github.com/hometown-fork/hometown>
+* Mastodon Install docs - <https://docs.joinmastodon.org/admin/install/>
+
 ## Ruby
 
 * Phlex - for object oriented HTML templates <https://www.phlex.fun/>

@@ -12,6 +12,8 @@ _See also - my list of [Engineering Resources](/engineering/resources/)_
 
 * [addressable](https://github.com/sporkmonger/addressable) - contributed enhancements to URI templates to match RFC
 * [this site](https://github.com/therabidbanana/therabidbanana.github.com) - Example of Github Pages with Clojure.
+* [notvery.social](https://notvery.social/) - I run my own instance of Mastodon on the fediverse
+* [Tenkiwi](https://play.tenkiwi.com/) - A open-source, cross-platform, react-native + web system for playing storytelling games. It's written in Clojure / Clojurescript.
 
 ----
 

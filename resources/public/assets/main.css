@@ -53,7 +53,7 @@ body {
     background-color: #efefef;
     padding: 2.5rem 2.5rem 2.5rem 5.5rem;
     border-right-radius: 10px;
-    box-shadow: 3px -2px 1px var(--color-very-dark);
+    box-shadow: 3px -2px 1px var(--color-very-dark), inset -3px 3px 0 var(--color-very-dark), inset 0 0 10px var(--color-dark);
 }
 
 #container main nav h1 {
