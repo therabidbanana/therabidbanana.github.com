@@ -71,7 +71,7 @@ body {
 
 #container main nav h1 {
 	  color: #efefef;
-	  text-shadow: -1px -1px 3px #112, -2px 2px 0 var(--color-triad-1), -4px 4px 0 var(--color-triad-2), -6px 6px 0 var(--color-very-dark);
+	  text-shadow: -1px 1px 3px #112, -2px 2px 0 var(--color-triad-1), -3px 3px 0 var(--color-triad-1), -4px 4px 0 var(--color-triad-2), -5px 5px 0 var(--color-triad-2), -6px 6px 0 var(--color-very-dark);
 	  font-size: 4.5rem;
 	  font-family: 'Bevan', Georgia, serif;
 	  line-height: 70px;
@@ -89,7 +89,7 @@ body {
 }
 #container main nav h1 a:hover {
     color: var(--color-light);
-	  text-shadow: -1px -1px 2px #112, -2px 2px 0 var(--color-complement), -4px 4px 0 var(--color-very-dark);
+	  text-shadow: -1px 1px 2px #112, -2px 2px 0 var(--color-complement), -3px 3px 0 var(--color-complement), -4px 4px 0 var(--color-very-dark);
 }
 
 #container article img {
