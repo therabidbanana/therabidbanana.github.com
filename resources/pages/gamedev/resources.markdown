@@ -26,6 +26,13 @@ Tic80 is a fantasy console for making tiny games. It is open source, comes with 
 * Tic80 Beginners Course
   
   <https://borbware.github.io/tic80-basics/>
+  
+* Tic80 Examples <https://cxong.github.io/tic-80-examples/>
+
+## Generic Game Programming Tips
+
+* <http://higherorderfun.com/blog/2012/05/20/the-guide-to-implementing-2d-platformers/>
+* <https://info.sonicretro.org/Sonic_Physics_Guide>
 
 ## Scratch
 
@@ -49,3 +56,4 @@ Scratch is a block based programming environment geared toward teaching kids how
 ## Löve
 
 * <https://sheepolution.com/learn/book/contents>
+
