@@ -11,7 +11,6 @@ I have made a hobby of making games with my daughters. We started with a Scratch
 
 ## Projects
 
-
 ### Disastrous Flying Critters
 
 ^[See also the [Tic80 Resources](/gamedev/resources/#tic80) I've collected]

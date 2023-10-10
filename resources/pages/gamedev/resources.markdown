@@ -5,10 +5,23 @@ accent-color: 285
 
 This is a list of links to Game development resources I've gathered.
 
+## Graphics
+
+* Making your own pixel art <https://orama-interactive.itch.io/pixelorama>
+* Free Pixel Art Assets <https://www.kenney.nl/assets/>
+
 ## Other Frameworks
 
 * Dragon Ruby - a framework for building games with Ruby, haven't had a chance to try it yet - <https://dragonruby.itch.io/>
 * <https://love2d.org/> - Interested to try it with fennel - <https://sr.ht/~benthor/absolutely-minimal-love2d-fennel/>
+
+## Playdate
+
+The Playdate is a developer-friendly handheld device that's pretty easy to get started with.
+
+* Playdate SDK <https://play.date/dev/> - includes a simulator
+* Pulp - A Web Based Game Builder for Playdate <https://play.date/pulp/>
+* Toybox - Asset Manager for Playdate projects <https://didier.malenfant.net/toybox.py/>
 
 ## Tic80
 

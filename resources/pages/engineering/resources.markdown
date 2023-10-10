@@ -10,6 +10,7 @@ This is a list of links to engineering resources I've gathered.
 ### CSS
 
 * Calculating Color: Dynamic Color Theming with Pure CSS - <https://una.im/css-color-theming/>
+* Web Design: <https://buildexcellentwebsit.es/>
 
 ### Social Web
 
@@ -37,6 +38,20 @@ This is a list of links to engineering resources I've gathered.
 * Building static sites in Clojure with Stasis
   
   <https://cjohansen.no/building-static-sites-in-clojure-with-stasis#building-static-sites-in-clojure-with-stasis>
+  
+## Specializations
+
+### Machine Learning
+
+* What Are Embeddings - A Deep Dive into how things like LLMs work <https://vickiboykis.com/what_are_embeddings>
+
+### CRDTs
+
+* <https://nomad.foo/blog/cola>
+
+### Parsing
+
+* <https://tenderlovemaking.com/2023/09/02/fast-tokenizers-with-stringscanner.html>
   
 ## As A Profession
 

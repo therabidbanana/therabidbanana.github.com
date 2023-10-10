@@ -5,6 +5,10 @@ accent-color: 110
 
 This is a list of links to resources to make tabletop games I've gathered. My Tenkiwi platform is Clojure/Clojurescript, so also check out [Engineering Resources](/engineering/resources/)
 
+## Audience Building
+
+* For newsletter creation <https://buttondown.email/>
+
 ## SRDs
 
 * Lots of different rules systems (System Reference Documents - SRDs) to start from: <https://fari.community/>
@@ -12,6 +16,7 @@ This is a list of links to resources to make tabletop games I've gathered. My Te
 ## Layout
 
 * Affinity Publisher is a great alternative to Adobe InDesign subscription - one time purchase and lots of resources to get started with: <https://affinity.serif.com/en-us/publisher/>
+* A big list of resources: <https://starshinescribbles.com/ttrpg-resources-masterpost/>
 
 ### Fonts
 
