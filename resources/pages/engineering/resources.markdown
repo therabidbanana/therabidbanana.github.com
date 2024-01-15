@@ -52,6 +52,7 @@ This is a list of links to engineering resources I've gathered.
 ### Parsing
 
 * <https://tenderlovemaking.com/2023/09/02/fast-tokenizers-with-stringscanner.html>
+* The Absolute Minimum Every Software Developer Must Know About Unicode in 2023 <https://tonsky.me/blog/unicode/>
   
 ## As A Profession
 
@@ -62,3 +63,13 @@ This is a list of links to engineering resources I've gathered.
 ### Interviewing
 
 * <https://github.com/TSiege/Tech-Interview-Cheat-Sheet>
+* <https://github.com/karanpratapsingh/system-design#twitter> - Design Twitter
+
+### Running an Engineering Org
+
+* LinkedIn's Developer Happiness / Productivity Framework <https://linkedin.github.io/dph-framework/>
+* Defining Domain Engineering <https://jackdanger.com/infrastructure-gravity/>
+
+### Studying
+
+* Perlis Languages - Learning from different languages <http://blog.fogus.me/2011/08/14/perlis-languages/>
