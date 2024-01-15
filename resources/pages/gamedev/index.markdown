@@ -11,6 +11,14 @@ I have made a hobby of making games with my daughters. We started with a Scratch
 
 ## Projects
 
+### Calm Sea
+
+Help a graceful mermaid as she explores the ocean looking for new treasures to take home.
+
+<iframe frameborder="0" src="https://itch.io/embed/2330044" width="552" height="167"><a href="https://therabidbanana.itch.io/calm-sea">Calm Sea by therabidbanana</a></iframe>
+
+
+
 ### Disastrous Flying Critters
 
 ^[See also the [Tic80 Resources](/gamedev/resources/#tic80) I've collected]
