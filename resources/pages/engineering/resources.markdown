@@ -11,6 +11,8 @@ This is a list of links to engineering resources I've gathered.
 
 * Calculating Color: Dynamic Color Theming with Pure CSS - <https://una.im/css-color-theming/>
 * Web Design: <https://buildexcellentwebsit.es/>
+* Every Layout: a very useful (paid) guide to bulletproof responsive CSS <https://every-layout.dev/layouts/>
+* Utopia: fluid type / grid sizing with CSS <https://utopia.fyi/>
 
 ### Social Web
 

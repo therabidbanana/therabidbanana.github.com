@@ -27,23 +27,24 @@
 (def markdown-renderer
   (assoc md.transform/default-hiccup-renderers
          ;; :doc specify a custom container for the whole doc
-         ;; :doc (partial md.transform/into-markup [:div])
+         :doc (fn [conf el] (md.transform/into-markup [:div {:class (get-in conf [:post-classes])}] conf el))
          ;; :plain fragments might be nice, but paragraphs help when no reagent is at hand
          :raw-html (fn [conf el] (h/raw (get-in el [:content 0 :text])))
          :footnote-ref (fn [conf el]
                          ;; [:code {} (get-in conf [:footnotes (:ref el)])]
                          (md.transform/into-markup [:aside]
                                                    conf
-                                                   (get-in conf [:footnotes (:ref el)]))
-                         )
+                                                   (get-in conf [:footnotes (:ref el)])))
          :code (fn [conf el]
                  (if (= (:language el) "aside")
                    [:pre [:code {:class (str "language-" (:language el))}
-                          (get-in el [:content 0 :text])]]))
-         ))
+                          (get-in el [:content 0 :text])]]))))
 
-(defn markdown-render [struct]
-  (md.transform/->hiccup (assoc markdown-renderer :footnotes (:footnotes struct))
+(defn markdown-render [{:as parsed-header, classes :post-classes
+                        :or {classes ["flow" "prose"]}}
+                       struct]
+  (md.transform/->hiccup (assoc markdown-renderer :footnotes (:footnotes struct)
+                                :post-classes classes)
                          struct)
   ;; [:code {} struct]
   )
@@ -51,12 +52,11 @@
 (defn parse-markdown [string]
   (let [has-header?     (str/starts-with? string "---")
         [_ header string] (if has-header?
-                          (str/split string #"---" 3)
-                          ["" "" string])
+                            (str/split string #"---" 3)
+                            ["" "" string])
         parsed-header     (if has-header?
                             (yaml/parse-string header)
                             {})]
     (->> (md/parse string)
-         (markdown-render)
+         (markdown-render parsed-header)
          (assoc {:header parsed-header} :body))))
-

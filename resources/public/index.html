@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
         <title>David Haslem</title>
         <link href="/assets/main.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Bevan:regular" rel="stylesheet" type="text/css" >
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Bevan:regular"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+        />
     </head>
     <body>
         <script>
@@ -14,49 +20,99 @@
             var diff = now - start;
             var oneDay = 1000 * 60 * 60 * 24;
             var day = Math.floor(diff / oneDay);
-            document.getElementsByTagName('body')[0].style.setProperty(`--color-h`, day);
+            document
+                .getElementsByTagName("body")[0]
+                .style.setProperty(`--color-h`, day);
         </script>
         <div id="container">
             <main>
                 <nav>
                     <h1>David Haslem _</h1>
                 </nav>
-                <article>
+                <article class="flow">
                     <p class="callout">
-                        My name is <strong>David</strong> and I make computers do stuff. I've been making
-                        websites for 20 years &mdash; <em>some of them are even useful <sup>[citation needed]</sup></em>
+                        My name is <strong>David</strong> and I make computers
+                        do stuff. I've been making websites for 20 years &mdash;
+                        <em
+                            >some of them are even useful
+                            <sup>[citation needed]</sup></em
+                        >
                     </p>
-                    <aside>
+                    <aside class="flow">
                         <p>Other places I'm online</p>
                         <ul>
-                            <li><a rel="me" href="https://notvery.social/@therabidbanana">Mastodon</a> for interesting tidbits</li>
-                            <li><a class="github" href="https://github.com/therabidbanana">Github</a> for code</li>
-                            <li><a class="itch" href="https://therabidbanana.itch.io">Itch</a> for making games</li>
+                            <li>
+                                <a
+                                    rel="me"
+                                    href="https://notvery.social/@therabidbanana"
+                                    >Mastodon</a
+                                >
+                                for interesting tidbits
+                            </li>
+                            <li>
+                                <a
+                                    class="github"
+                                    href="https://github.com/therabidbanana"
+                                    >Github</a
+                                >
+                                for code
+                            </li>
+                            <li>
+                                <a
+                                    class="itch"
+                                    href="https://therabidbanana.itch.io"
+                                    >Itch</a
+                                >
+                                for making games
+                            </li>
                         </ul>
-
                     </aside>
-                    <section>
-                        <h2><a href="/engineering/">Software Engineering</a></h2>
-                        <p>I'm currently a Staff Software Engineer at <a href="https://www.pathstream.com/">Pathstream</a>, helping our frontline students learn technology skills to unlock upward mobility into professional careers.</p>
-                        <p>I write occasionally about programming - most recently <a href="/blog/2023/building-games-with-kids/">Building Games with Kids</a></p>
-                    </section>
-                    <section>
-                        <h2><a href="/gamedev/">Video Games</a></h2>
-                        <p>I have made a hobby of making games with my daughters. We started with a Scratch for Beginners book and I've begun exploring alternatives.</p>
-                        <p>Most recently I've been playing around with Tic80 and made a game about Rainbow Princesses.</p>
-                        <iframe src="https://itch.io/embed/2102019?border_width=0&amp;bg_color=333C57&amp;fg_color=94B0C2&amp;link_color=fa5c5c&amp;border_color=36423f" width="206" height="165" frameborder="0"><a href="https://therabidbanana.itch.io/disastrous-flying-critters">Disastrous Flying Critters by therabidbanana</a></iframe>
-                    </section>
-                    <section>
-                        <h2><a href="/tabletop/">Tabletop Games</a></h2>
-                        <p>
-                            When I'm not programming computers I'm probably playing games. I have a ton of tabletop games and will spend a lot of time talking about them.
-                            I've made a cross-platform application for making and playing low-prep roleplaying games with friends over Zoom.
-                        </p>
-                    </section>
+                    <h2>
+                        <a href="/engineering/">Software Engineering</a>
+                    </h2>
+                    <p>
+                        I'm currently a Staff Software Engineer at
+                        <a href="https://www.pathstream.com/">Pathstream</a>,
+                        helping our frontline students learn durable skills to
+                        unlock upward mobility into professional careers.
+                    </p>
+                    <p>
+                        I write occasionally about programming - most recently
+                        <a href="/blog/2023/building-games-with-kids/"
+                            >Building Games with Kids</a
+                        >
+                    </p>
+                    <h2><a href="/gamedev/">Video Games</a></h2>
+                    <p>
+                        I have made a hobby of making games with my daughters.
+                        We started with a Scratch for Beginners book and I've
+                        begun exploring alternatives.
+                    </p>
+                    <p>
+                        Most recently I've been playing around with Tic80 and
+                        made a game about Rainbow Princesses.
+                    </p>
+                    <iframe
+                        src="https://itch.io/embed/2102019?border_width=0&amp;bg_color=333C57&amp;fg_color=94B0C2&amp;link_color=fa5c5c&amp;border_color=36423f"
+                        width="206"
+                        height="165"
+                        frameborder="0"
+                        ><a
+                            href="https://therabidbanana.itch.io/disastrous-flying-critters"
+                            >Disastrous Flying Critters by therabidbanana</a
+                        ></iframe
+                    >
+                    <h2><a href="/tabletop/">Tabletop Games</a></h2>
+                    <p>
+                        When I'm not programming computers I'm probably playing
+                        games. I have a ton of tabletop games and will spend a
+                        lot of time talking about them. I've made a
+                        cross-platform application for making and playing
+                        low-prep roleplaying games with friends over Zoom.
+                    </p>
                 </article>
             </main>
-            <div class="sidebar">
-            </div>
-      </div>
+            <div class="sidebar"></div>
+        </div>
     </body>
 </html>

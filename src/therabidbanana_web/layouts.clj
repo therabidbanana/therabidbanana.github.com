@@ -28,9 +28,7 @@
          [:section {}
           (if (string? body)
             (h/raw body)
-            body)]]
-        ]
-       [:div.sidebar {}]]
-      ]]))
+            body)]]]
+       [:div.sidebar {}]]]]))
 
 (def by-name {"main" main})
