@@ -311,7 +311,7 @@ h5 {
 @media screen and (max-width: 960px) {
     #container {
         display: block;
-        margin: 0 var(--space-m-l);
+        margin: 0;
     }
 
     #container main {
