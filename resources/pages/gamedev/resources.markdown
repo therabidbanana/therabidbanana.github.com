@@ -7,13 +7,18 @@ This is a list of links to Game development resources I've gathered.
 
 ## Graphics
 
-* Making your own pixel art <https://orama-interactive.itch.io/pixelorama>
+* Pixelorama - a tool for making your own pixel art <https://orama-interactive.itch.io/pixelorama>
 * Free Pixel Art Assets <https://www.kenney.nl/assets/>
 
 ## Other Frameworks
 
 * Dragon Ruby - a framework for building games with Ruby, haven't had a chance to try it yet - <https://dragonruby.itch.io/>
 * <https://love2d.org/> - Interested to try it with fennel - <https://sr.ht/~benthor/absolutely-minimal-love2d-fennel/>
+
+## Other Tools
+
+* LDTK - a free tool for creating tile based maps for games - the format is a documented JSON file which makes it easy to
+  read on multiple platforms <https://ldtk.io/>
 
 ## Playdate
 
@@ -69,4 +74,3 @@ Scratch is a block based programming environment geared toward teaching kids how
 ## Löve
 
 * <https://sheepolution.com/learn/book/contents>
-

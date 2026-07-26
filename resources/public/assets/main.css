@@ -175,8 +175,88 @@ h5 {
     --flow-space: var(--space-m-l);
 }
 
+
+/*
+-----------------
+Every Layout helpers - https://every-layout.dev/layouts
+------------------
+*/
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@supports (width: min(250px, 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-block: 0;
+}
+
+.stack > * + * {
+  margin-block-start: var(--space, 1.5rem);
+}
+
+
+.box {
+  padding: var(--space-s);
+  border: var(--border-thin, 2px) solid;
+  /*color: var(--color);*/
+  border-color: var(--color);
+  /*background-color: var(--color);*/
+}
+
+.box * {
+  color: inherit;
+}
+
+.box.invert {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+.reel {
+  display: flex;
+  block-size: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /*scrollbar-color: #fff #000;*/
+}
+
+.reel::-webkit-scrollbar {
+  block-size: 1rem;
+}
+
+.reel::-webkit-scrollbar-track {
+  /*background-color: #000;*/
+}
+
+.reel::-webkit-scrollbar-thumb {
+  /*background-color: #000;
+  background-image: linear-gradient(#000 0, #000 0.25rem, #fff 0.25rem, #fff 0.75rem, #000 0.75rem);*/
+}
+
+.reel > * {
+  flex: 0 0 auto;
+}
+
+
+/*
+-----------------
+End Every Layout Helpers
+------------------
+*/
+
 #container {
-    max-width: 1440px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 75% 25%;
@@ -184,7 +264,6 @@ h5 {
 }
 
 #container main {
-    max-width: 1280px;
     margin-left: 4rem;
     border-left: 1rem solid var(--color);
     box-shadow:

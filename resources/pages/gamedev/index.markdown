@@ -11,15 +11,57 @@ I have made a hobby of making games with my daughters. We started with a Scratch
 
 ## Projects
 
-### Calm Sea
+### Playdate
+
+#### Playdate + Fennel (+ Love) Starter Kit
+
+As I've developed Playdate games with Fennel I've spent time building out a shared set of files that make it easier to get started with Fennel on Playdate - I've even figured out how to adapt those games to Love2D, although it's hard to keep track of the differences between the two platforms and my rendering code is non-performant on bigger games. Since Love2D has community tools supporting web compilation, this means I can compile these playdate games to a web simulator:
+
+<https://therabidbanana.itch.io/princess-kitty-cafe/devlog/759706/now-with-web-simulator>
+
+<div class="box"><div class="grid">
+<div class="stack">
+
+#### Meow Train
+
+Play as a cat helping people get to their trains - run as fast as you can to the right platform.
+
+<iframe frameborder="0" src="https://itch.io/embed/3543663?bg_color=4f6781&amp;fg_color=ffffff&amp;link_color=faec5b&amp;border_color=55376b" width="208" height="167"><a href="https://therabidbanana.itch.io/meow-train">Meow Train by therabidbanana</a></iframe>
+
+
+</div>
+<div class="stack">
+
+#### Fairy Garden
+
+Create a garden that makes fairies want to stick around forever - the idea is something kinda like a tower defense but where you're trying to prevent damage instead of inflict it.
+
+<iframe frameborder="0" src="https://itch.io/embed/3084741?bg_color=278e45&amp;fg_color=ffffff&amp;link_color=faec5b&amp;border_color=bebebe" width="208" height="167"><a href="https://therabidbanana.itch.io/fairy-garden">Fairy Garden by therabidbanana</a></iframe>
+
+</div>
+<div class="stack">
+
+#### Princess Kitty Cafe
+
+A simulator of a Princess trying to run a successful kitty cafe. Make sure to keep the milk stocked!
+
+<iframe frameborder="0" src="https://itch.io/embed/2733538" width="208" height="167"><a href="https://therabidbanana.itch.io/princess-kitty-cafe">Princess Kitty Cafe by therabidbanana</a></iframe>
+
+</div>
+<div class="stack">
+
+#### Calm Sea
 
 Help a graceful mermaid as she explores the ocean looking for new treasures to take home.
 
-<iframe frameborder="0" src="https://itch.io/embed/2330044" width="552" height="167"><a href="https://therabidbanana.itch.io/calm-sea">Calm Sea by therabidbanana</a></iframe>
+<iframe frameborder="0" src="https://itch.io/embed/2330044" width="208" height="167"><a href="https://therabidbanana.itch.io/calm-sea">Calm Sea by therabidbanana</a></iframe>
 
+</div>
+</div></div>
 
+### Tic80
 
-### Disastrous Flying Critters
+#### Disastrous Flying Critters
 
 ^[See also the [Tic80 Resources](/gamedev/resources/#tic80) I've collected]
 
@@ -30,7 +72,10 @@ Help the Rainbow Witch Princess save the kingdom from the Disastrous Flying Crit
 ![Rainbow Princess Game](/assets/images/gamedev/flying-critters/1.png)
 ![Rainbow Princess Game](/assets/images/gamedev/flying-critters/3.png)
 
-### Space Flyer
+
+### Scratch
+
+#### Space Flyer
 
 ^[[Coding for Beginners](https://www.amazon.com/Coding-Beginners-Scratch-Rosie-Dickins/dp/1474975097) is a great resource for engaging kids with programming]
 

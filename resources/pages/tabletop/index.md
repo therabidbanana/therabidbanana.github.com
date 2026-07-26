@@ -13,7 +13,7 @@ I play a lot of tabletop games when I'm not at a computer. I've even tried to bu
 
 ### Tenkiwi
 
-My biggest game project so far is Tenkiwi, an open source platform I built for playing storytelling games. Imagine it as a platform for building Jackbox games with Dungeons and Dragons.
+My biggest game project so far is Tenkiwi, an open source platform I built for playing storytelling games. Imagine it as a platform for building Jackbox games merged with Dungeons and Dragons.
 
 [^Tenkiwi]
 
