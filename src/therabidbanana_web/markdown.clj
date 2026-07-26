@@ -36,9 +36,15 @@
                                                    conf
                                                    (get-in conf [:footnotes (:ref el)])))
          :code (fn [conf el]
-                 (if (= (:language el) "aside")
-                   [:pre [:code {:class (str "language-" (:language el))}
-                          (get-in el [:content 0 :text])]]))))
+                (let [possible-file (clojure.string/replace-first (:info el) (:language el) "")]
+                  (if (not= (:language el) "aside")
+                    [:div.code-snippet
+                      (if-not (clojure.string/blank? possible-file)
+                        [:span.filename possible-file])
+                      [:pre
+                        [:code {:class (str "language-" (:language el))}
+                          (get-in el [:content 0 :text])]]]))
+                 )))
 
 (defn markdown-render [{:as parsed-header, classes :post-classes
                         :or {classes ["flow" "prose"]}}

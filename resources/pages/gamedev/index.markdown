@@ -13,14 +13,18 @@ I have made a hobby of making games with my daughters. We started with a Scratch
 
 ### Playdate
 
+#### Playdate + Ruby
+
+My latest experiments with Playdate involve Ruby. [I wrote some of the details](/blog/2026/mruby-for-playdate) as I was getting it started.
+
 #### Playdate + Fennel (+ Love) Starter Kit
 
-As I've developed Playdate games with Fennel I've spent time building out a shared set of files that make it easier to get started with Fennel on Playdate - I've even figured out how to adapt those games to Love2D, although it's hard to keep track of the differences between the two platforms and my rendering code is non-performant on bigger games. Since Love2D has community tools supporting web compilation, this means I can compile these playdate games to a web simulator:
+As I've developed Playdate games with Fennel I've spent time building out a shared set of files that make it easier to get started with Fennel on Playdate - I've even figured out how to adapt those games to Love2D, although it's hard to keep track of the differences between the two platforms and my rendering code is non-performant on bigger games. Since Love2D has community tools supporting web compilation, this means I can compile some Playdate games to a web simulator:
 
 <https://therabidbanana.itch.io/princess-kitty-cafe/devlog/759706/now-with-web-simulator>
 
-<div class="box"><div class="grid">
-<div class="stack">
+<div class="grid">
+<div class="box stack">
 
 #### Meow Train
 
@@ -30,7 +34,7 @@ Play as a cat helping people get to their trains - run as fast as you can to the
 
 
 </div>
-<div class="stack">
+<div class="box stack">
 
 #### Fairy Garden
 
@@ -39,7 +43,7 @@ Create a garden that makes fairies want to stick around forever - the idea is so
 <iframe frameborder="0" src="https://itch.io/embed/3084741?bg_color=278e45&amp;fg_color=ffffff&amp;link_color=faec5b&amp;border_color=bebebe" width="208" height="167"><a href="https://therabidbanana.itch.io/fairy-garden">Fairy Garden by therabidbanana</a></iframe>
 
 </div>
-<div class="stack">
+<div class="box stack">
 
 #### Princess Kitty Cafe
 
@@ -48,7 +52,7 @@ A simulator of a Princess trying to run a successful kitty cafe. Make sure to ke
 <iframe frameborder="0" src="https://itch.io/embed/2733538" width="208" height="167"><a href="https://therabidbanana.itch.io/princess-kitty-cafe">Princess Kitty Cafe by therabidbanana</a></iframe>
 
 </div>
-<div class="stack">
+<div class="box stack">
 
 #### Calm Sea
 
@@ -57,7 +61,7 @@ Help a graceful mermaid as she explores the ocean looking for new treasures to t
 <iframe frameborder="0" src="https://itch.io/embed/2330044" width="208" height="167"><a href="https://therabidbanana.itch.io/calm-sea">Calm Sea by therabidbanana</a></iframe>
 
 </div>
-</div></div>
+</div>
 
 ### Tic80
 
