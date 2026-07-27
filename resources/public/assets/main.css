@@ -401,6 +401,7 @@ p code {
   line-height: 1;
   color: var(--color-light);
   background-color:  color-mix(in srgb, var(--color-dark) 90%, transparent);
+  word-break: break-word;
 }
 
 .code-snippet {
