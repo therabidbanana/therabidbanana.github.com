@@ -3,9 +3,11 @@ title: "MRuby on a Playdate"
 accent-color: 57
 ---
 
-I've been making Playdate games with the kiddos for a couple of years now. Most of these games have been done during Lisp Game Jams, giving me a chance to use a language I don't interact with much day to day. For Playdate, which is primarily a Lua platform, this means using Fennel, a Lisp that transpiles to Lua
+I've been making Playdate games with the kiddos for a couple of years now. Most of these games have been done during Lisp Game Jams, giving me a chance to use a language I don't interact with much day to day. For Playdate, which is primarily a Lua platform, this means using Fennel, a Lisp that transpiles to Lua.
 
 This has gotten me through making a few different games now, but as the kids get older and want to program their own games, Fennel is definitely a tougher "beginner" language so I've been thinking about something I'm more familiar with: Ruby. Playdate has a C SDK, and Ruby has an embeddable language fork called "MRuby" that can be integrated tightly with C, so the two seem like they could be a good fit!
+
+Building this out required a few steps, first getting a working version of MRuby, then finding out how to get it into an actual Playdate project, then finally learning how to wrap the SDK correctly, but with all the pieces in place, now I've gotten things to a point that we may actually start building games! 
 
 ## Getting MRuby
 
@@ -340,6 +342,6 @@ end
 Pyrite.load_cartridge(HelloMruby)
 ```
 
-With all those pieces together, we can start building an actual ruby game framework, adding SDK wrappers as needed.
+With all those pieces together, I can start building an actual ruby game framework, adding SDK wrappers as needed. I'm building it as a new open source project that can hopefully become my new go-to when I want to do a Playdate game jam! 
 
-Here's the project so you can see the parts that I'm still missing: <https://github.com/therabidbanana/playdate-mruby>
+<https://github.com/therabidbanana/playdate-mruby>
